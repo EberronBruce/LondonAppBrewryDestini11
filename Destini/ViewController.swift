@@ -1,10 +1,4 @@
-//
-//  ViewController.swift
-//  Destini
-//
-//  Created by Philipp Muellauer on 01/09/2015.
-//  Copyright (c) 2015 London App Brewery. All rights reserved.
-//
+
 
 import UIKit
 
@@ -34,7 +28,7 @@ class ViewController: UIViewController {
     @IBOutlet weak var bottomButton: UIButton!      // Has TAG = 2
     @IBOutlet weak var storyTextView: UILabel!
     
-    // TODO Step 5: Initialise instance variables here
+    
     var storyIndex : Int = 0
     
     
@@ -42,7 +36,6 @@ class ViewController: UIViewController {
         super.viewDidLoad()
         
         
-        // TODO Step 3: Set the text for the storyTextView, topButton, bottomButton, and to T1_Story, T1_Ans1, and T1_Ans2
         storyTextView.text = story1
         topButton.setTitle(answer1a, for: .normal)
         bottomButton.setTitle(answer1b, for: .normal)
@@ -54,7 +47,7 @@ class ViewController: UIViewController {
     // User presses one of the buttons
     @IBAction func buttonPressed(_ sender: UIButton) {
     
-        // TODO Step 4: Write an IF-Statement to update the views
+        
         if storyTextView.text == story1 {
             storyIndex = 1
         } else if storyTextView.text == story2 {
@@ -65,7 +58,7 @@ class ViewController: UIViewController {
         
         storyFlowWith(storyProgress: storyIndex, withAnswer: sender.tag)
                 
-        // TODO Step 6: Modify the IF-Statement to complete the story
+      
         
         
         
